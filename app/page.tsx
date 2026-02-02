@@ -88,7 +88,8 @@ export default function LandingPage() {
   };
 
   const handleBuyTickets = () => {
-    router.push(`/checkout?quantity=${quantity}`);
+    // Redirigir a etickets
+    window.open("https://etickets.com.ar/cliente/eventos/", "_blank");
   };
 
   if (loading) {
@@ -177,12 +178,7 @@ export default function LandingPage() {
               </div>
             </div>
             <button
-              onClick={() =>
-                window.scrollTo({
-                  top: document.getElementById("comprar")?.offsetTop,
-                  behavior: "smooth",
-                })
-              }
+              onClick={handleBuyTickets}
               className="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400 text-green-900 px-4 sm:px-8 py-2 sm:py-3 rounded-full font-black text-sm sm:text-lg hover:shadow-2xl hover:scale-110 transition-all animate-pulse shadow-xl border-2 border-white"
             >
               <span className="hidden sm:inline">¡Comprar ahora! 🎟️</span>
