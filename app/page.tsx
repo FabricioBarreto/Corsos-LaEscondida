@@ -12,6 +12,7 @@ import {
   Users,
   Sparkles,
   Heart,
+  AlertTriangle,
 } from "lucide-react";
 import { formatCurrency } from "@/lib/utils";
 import Image from "next/image";
@@ -263,7 +264,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="text-xs sm:text-sm text-emerald-50 truncate">
-                Av Madre Teresa de Calcuta
+                {config.eventLocation}
               </div>
             </div>
 
@@ -352,7 +353,7 @@ export default function LandingPage() {
                 <div className="absolute top-0 left-0 text-9xl">🎭</div>
                 <div className="absolute bottom-0 right-0 text-9xl">🎉</div>
               </div>
-              <div className="relative z-10">
+              <div className="relative z-10" id="secure-payment">
                 <div className="text-yellow-300 text-xs sm:text-sm font-bold uppercase tracking-widest mb-2 sm:mb-3 flex items-center justify-center gap-2">
                   <Sparkles className="w-3 h-3 sm:w-4 sm:h-4" />
                   Entrada General
@@ -428,6 +429,37 @@ export default function LandingPage() {
                 </div>
               </div>
 
+              {/* ADVERTENCIA IMPORTANTE - QR ÚNICO */}
+              <div className="mb-6 sm:mb-8 bg-gradient-to-r from-red-50 via-orange-50 to-red-50 border-3 border-red-500 rounded-lg sm:rounded-xl p-3 sm:p-4 shadow-lg">
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <div className="flex-shrink-0">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-red-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                      <AlertTriangle className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-red-900 font-black text-sm sm:text-base mb-1 sm:mb-2 uppercase">
+                      ⚠️ Advertencia Importante
+                    </h4>
+                    <div className="space-y-1">
+                      <p className="text-red-800 font-bold text-xs sm:text-sm leading-relaxed">
+                        El código QR es de{" "}
+                        <span className="underline decoration-2">
+                          USO ÚNICO
+                        </span>
+                      </p>
+                      <p className="text-red-700 text-xs leading-relaxed">
+                        • Una vez escaneado,{" "}
+                        <strong>pierde validez automáticamente</strong>
+                      </p>
+                      <p className="text-red-700 text-xs leading-relaxed">
+                        • <strong>No compartir</strong> el QR para evitar
+                        fraudes
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
               {/* Buy Button */}
               <button
                 onClick={handleBuyTickets}
