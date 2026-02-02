@@ -341,7 +341,7 @@ export default function LandingPage() {
       </div>
 
       {/* Ticket Purchase Section */}
-      <div id="comprar" className="pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
+      <div className="pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Title */}
           <div className="text-center mb-6 sm:mb-8">
@@ -367,7 +367,10 @@ export default function LandingPage() {
                   Entrada General
                   <Sparkles className="w-3 h-3 sm:w-4 sm:h-4" />
                 </div>
-                <div className="text-white text-5xl sm:text-6xl md:text-7xl font-black mb-2 sm:mb-3 drop-shadow-lg">
+                <div
+                  className="text-white text-5xl sm:text-6xl md:text-7xl font-black mb-2 sm:mb-3 drop-shadow-lg"
+                  id="comprar"
+                >
                   {formatCurrency(config.ticketPrice || 0)}
                 </div>
                 <div className="text-lime-100 text-sm sm:text-base md:text-lg font-medium px-4">
