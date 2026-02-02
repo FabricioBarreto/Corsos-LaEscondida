@@ -89,7 +89,7 @@ export default function LandingPage() {
 
   const handleBuyTickets = () => {
     // Redirigir a etickets
-    window.open("https://etickets.com.ar/cliente/eventos/", "_blank");
+    window.open("https://etickets.com.ar/carnaval-la-escondida/", "_blank");
   };
 
   if (loading) {
@@ -263,7 +263,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="text-xs sm:text-sm text-emerald-50 truncate">
-                {config.eventLocation}
+                Av Madre Teresa de Calcuta
               </div>
             </div>
 
