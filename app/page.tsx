@@ -179,7 +179,15 @@ export default function LandingPage() {
               </div>
             </div>
             <button
-              onClick={handleBuyTickets}
+              onClick={() => {
+                const element = document.getElementById("comprar");
+                if (element) {
+                  element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+              }}
               className="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400 text-green-900 px-4 sm:px-8 py-2 sm:py-3 rounded-full font-black text-sm sm:text-lg hover:shadow-2xl hover:scale-110 transition-all animate-pulse shadow-xl border-2 border-white"
             >
               <span className="hidden sm:inline">¡Comprar ahora! 🎟️</span>
