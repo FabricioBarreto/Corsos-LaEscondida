@@ -371,7 +371,7 @@ export default function LandingPage() {
                   className="text-white text-5xl sm:text-6xl md:text-7xl font-black mb-2 sm:mb-3 drop-shadow-lg"
                   id="comprar"
                 >
-                  {formatCurrency(config.ticketPrice || 0)}
+                  $3.000
                 </div>
                 <div className="text-lime-100 text-sm sm:text-base md:text-lg font-medium px-4">
                   Por persona • Acceso completo al evento
